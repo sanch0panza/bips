@@ -107,7 +107,7 @@ The top 3 bits of nVersion MUST be set to 001 , yielding a range of possible
 nVersion values between [0x20000000...0x3FFFFFFF], inclusive.
 
 If a block's nVersion does not have its top 3 bits set to 001, all its signaling
-bits MUST be treated as if they are 0 (see also: 'Bit states' section below).
+bits MUST be treated as if they are 0 (see also: 'Tallying' section below).
 
 
 ===Deployment states===
@@ -141,6 +141,9 @@ Each fork deployment is specified by the following per-chain parameters:
 
 ===Tallying===
 
+If a block's nVersion does not have its top 3 bits set to 001, all its signaling
+bits MUST be treated as if they are '0'.
+
 A signaling bit value of '1' SHALL indicate support of a fork and SHALL count
 towards its tally on a chain.
 
@@ -156,7 +159,6 @@ changes (including after reorganizations).
 The following diagram illustrates the generalized state machine:
 
 <img src="bip-genvbvoting/bip-genvbvoting-states-small.png" align="middle"></img>
-
 <br>
 
 '''NOTES:'''
@@ -309,7 +311,7 @@ A supporting miner SHOULD signal '1' on a bit for which the deployment
 is LOCKED_IN state so that uptake is visible. However, this has no effect on
 consensus rules.
 Once LOCKED_IN, a deployment proceeds to ACTIVE solely based on the configured
-grace period parameters (see 'Fork deployment parameters' below).
+grace period parameters (see 'Fork deployment parameters' above).
 
 A miner SHOULD signal '0' on a bit if they wish to suspend signaling of support
 for a fork that is DEFINED in their software.
