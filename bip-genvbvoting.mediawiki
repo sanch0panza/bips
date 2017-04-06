@@ -306,11 +306,27 @@ It is NOT RECOMMENDED to signal '1' for bits where the meaning is undefined
 (i.e. bits which are unclaimed by proposals).
 
 
+==Deployment==
+
+As this BIP is not itself consensus-relevant (Information like BIP9), it can
+be rolled out without the use of a BIP9 fork bit.
+
+Backward compatibility through judicious fork configuration parameters should
+ensure that it does not interfere with existing known deployments.
+
+By way of design it does not interfere with unknown (undefined) deployments.
+
+
+==Reference implementation==
+
+Under construction.
+
+
 ==References==
 
 [1] http://pubs.opengroup.org/onlinepubs/9699919799/xrat/V4_xbd_chap04.html#tag_21_04_16
 
-[2] [[bip-0009/assignments.mediawiki|List of existing BIP9 deployment proposals]]
+[2] [[https://github.com/bitcoin/bips/blob/master/bip-0009/assignments.mediawiki|List of existing BIP9 deployment proposals]]
 
 
 ==Copyright==
