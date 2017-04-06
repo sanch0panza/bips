@@ -157,14 +157,17 @@ The following diagram illustrates the generalized state machine:
 
 <img src="bip-genvbvoting/bip-genvbvoting-states-small.png" align="middle"></img>
 
-The genesis block SHALL have the state DEFINED for each deployment.
+
+NOTES:
+
+The genesis block of any chain SHALL have the state DEFINED for each deployment.
 
 A given deployment SHALL remain in the DEFINED state until it either passes the
 starttime (and becomes STARTED) or the timeout time (and becomes FAILED).
 
 Once a deployment has STARTED, the signal for that deployment SHALL be tallied
 over the the past windowsize blocks whenever a new block is received on that
-chain. The tally SHALL include the newly received block [to be confirmed].
+chain.
 
 A transition from the STARTED state to the LOCKED_IN state SHALL only occur
 when all of these are true:
