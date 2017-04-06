@@ -157,8 +157,9 @@ The following diagram illustrates the generalized state machine:
 
 <img src="bip-genvbvoting/bip-genvbvoting-states-small.png" align="middle"></img>
 
+<br>
 
-NOTES:
+'''NOTES:'''
 
 The genesis block of any chain SHALL have the state DEFINED for each deployment.
 
