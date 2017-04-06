@@ -171,9 +171,10 @@ chain.
 
 A transition from the STARTED state to the LOCKED_IN state SHALL only occur
 when all of these are true:
-- the height of the received block is an integer multiple of the window size
-- the MTP is below the timeout time
-- at least threshold out of windowsize blocks have signaled support
+
+* the height of the received block is an integer multiple of the window size
+* the MTP is below the timeout time
+* at least threshold out of windowsize blocks have signaled support
 
 A similar height synchronization precondition SHALL exist for the transition from
 LOCKED_IN to ACTIVE.
