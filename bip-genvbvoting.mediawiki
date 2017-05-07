@@ -387,7 +387,12 @@ By way of design it does not interfere with unknown (undefined) deployments.
 
 ==Reference implementation==
 
-Under construction.
+A working reference implementation, including tests, can be found in this Pull Request:
+
+https://github.com/BitcoinUnlimited/BitcoinUnlimited/pull/458
+
+Existing unit tests and regression tests have been left active to demonstrate
+backward compatibility of the default settings with BIP9.
 
 
 ==References==
